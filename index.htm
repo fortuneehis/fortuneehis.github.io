@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FE+</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="icon" href="icon.png" sizes="16x16" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body onload="animateHTML().init();">
+  <nav class="navbar navbar-light light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="100" height="40" class="logo">
+  </a>
+  <div class="menu">
+    <div class="hamburger"></div>
+  </div>
+  <ul class="init">
+      <li class="li"><a href="#about"><p>ABOUT</p></a></li>
+      <li class="li"><a href="#services"><p>SERVICES</p></a></li>
+      <li class="li"><a href="#languages"><p>LANGUAGES</p></a></li>
+      <li class="li"><a href="#portfolio"><p>PORTFOLIO</p></a></li>
+    </ul>
+</nav>
+<div class="loader">
+  <div class="load1"></div>
+  <div class="load2"></div>
+  <div class="load-img"></div>
+</div>
+<header id="home">
+  <div class="img mx-auto d-block"><img src="ME.jpg"></div>
+<div class="text-block"><h1>Hi, I am Fortune<span> EHIS</span></h1></div>
+<h3>Web Developer - Software Developer - Game Developer</h3>
+<a class="btn"><p>CONTACT</p></a>
+<div class="contact">
+  <div class="social-links">
+    <li><div class="social-link"><a href="http://facebook.com/fortune.ehis.5" target="_blank"><img src="facebook.svg" class="social-icon" width="30" height="30"></a></div></li>
+    <li><div class="social-link"><a href="#" target="_blank"><img src="twitter.svg" class="social-icon" width="30" height="30"></a></div></li>
+    <li><div class="social-link"><a href="#" target="_blank"><img src="instagram.svg"class="social-icon" width="30" height="30"></a></div></li>
+  </div>
+</div>
+</header>
+<section class="about" id="about">
+  <div class="attach"><h2>ABOUT ME</h2></div>
+  <p class="hidden">A developer based in Lagos State, Nigeria with an endless potential for technology. My speciality spans across UI/UX Design, Web Development, Software Development and Game Development. I achieve this through the use of standard techniques and tools. I overcome challenges, and improve my knowledge and skills as I encounter new projects.
+  Technology have been in my life since I was a kid and I have always loved anything related to Technology and Art. I started to code and design at a very young age. Most of my skills and knowledge are self-taught. I have passion for designing creative and modern websites on various platforms. I am constantly pursuing my passion to learn more about Artifical Intelligence(AI) and its subordinates (Machine Learning, Deep Learning and Computer Vision).
+</p>
+</section>
+<section class="services" id="services">
+  <div class="attach white"><h2 class="serv-text">SERVICES</h2></div>
+  <div class="row hidden">
+    <div class="col-md-4 service-margin">
+      <div class="service-box">
+        <h2 class="white">WEB DEVELOPMENT</h2>
+         <img src="web.svg" width="100" height="100" class="img-stack">
+          <p class="p-white">I look to building robust and responsive web applications with nice UI design ranging from mobile devices to desktops.</p>
+      </div>
+    </div>
+      <div class="col-md-4 service-margin">
+      <div class="service-box">
+        <h2 class="white">SOFTWARE DEVELOPMENT</h2>
+         <img src="software.svg" width="100" height="100" class="img-stack">
+          <p class="p-white">Software development is very technical from design to development. I look to building softwares with intuitive UX/UI tailored to your needs.</p>
+      </div>
+    </div>
+      <div class="col-md-4 service-margin">
+      <div class="service-box">
+        <h2 class="white">GAME DEVELOPMENT</h2>
+         <img src="game.svg" width="100" height="100" class="img-stack">
+         <p class="p-white">Building games is actually the best part, where you sit and watch your ideas brought to life. Ranging from 2D to 3D game development</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="languages" id="languages">
+  <div class="attach"><h2>LANGUAGES</h2></div>
+  <div class="row hidden">
+        <div class="col-md-4">
+          <div class="skills">
+            <li><p>Html</p><span class="val">100%</span><span class="bar"><span class="html"></span></span></li>
+            <li><p>Css</p><span class="val">80%</span><span class="bar"><span class="css"></span></span></li>
+            <li><p>Javascript</p><span class="val">74%</span><span class="bar"><span class="js"></span></span></li>
+            <li><p>Php</p><span class="val">70%</span><span class="bar"><span class="php"></span></span></li>
+          </div>
+        </div>  
+         <div class="col-md-4">
+          <div class="skills">
+            <li><p>C#</p><span class="val">87%</span><span class="bar"><span class="csharp"></span></span></li>
+            <li><p>Java</p><span class="val">65%</span><span class="bar"><span class="java"></span></span></li>
+            <li><p>C++</p><span class="val">60%</span><span class="bar"><span class="cplus"></span></span></li>
+            <li><p>Swift</p><span class="val">80%</span><span class="bar"><span class="swift"></span></span></li>
+          </div>
+        </div>  
+         <div class="col-md-4">
+          <div class="skills">
+            <li><p>Python</p><span class="val">75%</span><span class="bar"><span class="python"></span></span></li>
+            <li><p>SQL</p><span class="val">77%</span><span class="bar"><span class="sql"></span></span></li>
+        </div>  
+        </div>
+  </div>
+</section>
+<section class="portfolio" id="portfolio">
+
+  <div class="attach white"><h2>PORTFOLIO</h2></div>
+  <h4><span style="font-weight: bolder;">NOTE: </span>These are just personal projects.</h4>
+  <div class="row hidden">
+    <div class="col-md-4 col-sm service-margin">
+        <div class="service-box port">
+     <div class="single">
+        <img src="final mockup black.png" class="port-img">
+        <div class="cont">
+          <h2>MOTIVATE</h2>
+          <p>HTML, CSS(Bootstrap), JAVASCRIPT(JQuery)</p>
+          <div class="btn-group">
+          <a class="btn"><p>SOURCE CODE</p></a>
+          <a class="btn"><p>DEMO</p></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+      <div class="col-md-4 service-margin">
+        <div class="service-box port">
+     <div class="single">
+        <img src="test.jpg" class="port-img">
+        <div class="cont">
+          <h2>Responsive CRUD Application (PHP)</h2>
+          <p>HTML, CSS(Bootstrap), JAVASCRIPT(JQuery), PHP, MySQL</p>
+          <div class="btn-group">
+          <a class="btn"><p>SOURCE CODE</p></a>
+          <a class="btn"><p>DEMO</p></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+      <div class="col-md-4 service-margin">
+        <div class="service-box port">
+     <div class="single">
+        <img src="test.jpg" class="port-img">
+        <div class="cont">
+          <h2>Responsive CRUD Application (PHP)</h2>
+          <p>HTML, CSS(Bootstrap), JAVASCRIPT(JQuery), PHP, MySQL</p>
+          <div class="btn-group">
+          <a class="btn"><p>SOURCE CODE</p></a>
+          <a class="btn"><p>DEMO</p></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+     <div class="col-md-4 service-margin">
+        <div class="service-box port">
+     <div class="single">
+        <img src="final mockup black.png" class="port-img">
+        <div class="cont">
+          <h2>Responsive CRUD Application (PHP)</h2>
+          <p>HTML, CSS(Bootstrap), JAVASCRIPT(JQuery), PHP, MySQL</p>
+          <div class="btn-group">
+          <a class="btn"><p>SOURCE CODE</p></a>
+          <a class="btn"><p>DEMO</p></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+     <div class="col-md-4 service-margin">
+        <div class="service-box port">
+     <div class="single">
+        <img src="final mockup black.png" class="port-img">
+        <div class="cont">
+          <h2>Responsive CRUD Application (PHP)</h2>
+          <p>HTML, CSS(Bootstrap), JAVASCRIPT(JQuery), PHP, MySQL</p>
+          <div class="btn-group">
+          <a class="btn"><p>SOURCE CODE</p></a>
+          <a class="btn"><p>DEMO</p></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+     <div class="col-md-4 service-margin">
+        <div class="service-box port">
+     <div class="single">
+        <img src="final mockup black.png" class="port-img">
+        <div class="cont">
+          <h2>Responsive CRUD Application (PHP)</h2>
+          <p>HTML, CSS(Bootstrap), JAVASCRIPT(JQuery), PHP, MySQL</p>
+          <div class="btn-group">
+          <a class="btn"><p>SOURCE CODE</p></a>
+          <a class="btn"><p>DEMO</p></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<a href="#home"><div class="fixed-icon"><img src="rocket.svg" width="30" height="30" class="fixed-img"></div></a>
+<div class="footer">
+  <p>&copy; COPYRIGHT 2019</p>
+  <p>Designed with <img src="heart.svg" width="30" height="30" class="footer-img"> by<span class="text-span"> FORTUNE EHIS</span></p>
+</div>
+</body>
+</html>
