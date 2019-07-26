@@ -503,7 +503,7 @@ header h3 span {
 }
 
 .services {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("./img/leaf_black.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("leaf_black.png");
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("leaf_black.png");
   background-size: cover;
   background-position: center;
