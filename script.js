@@ -50,15 +50,20 @@
     init: init
   };
 };
-
+//chrome && Firefox
+//chrome(document.body)
+//firefox(document.documentElement)
 window.onscroll = function() {
-  var d = document.documentElement;
+  var d = document.body;
   var offset = d.scrollTop;
+  var c = document.documentElement;
+  var offsetc = c.scrollTop;
 
-  if (offset >= 150) {
+  if (offset >= 150 || offsetc >=150) {
     $('.light').addClass('scroll');
   }else{
      $('.light').removeClass('scroll');
   }
 
-};
+}
+

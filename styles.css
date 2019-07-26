@@ -233,8 +233,8 @@ ul li a p {
 }
 
 header {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(164, 227, 161, 0.8)), to(rgba(164, 227, 161, 0.8))), url("ME.jpg");
-  background: linear-gradient(0deg, rgba(164, 227, 161, 0.8), rgba(164, 227, 161, 0.8)), url("ME.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(164, 227, 161, 0.8)), to(rgba(164, 227, 161, 0.8))), url("ME.JPG");
+  background: linear-gradient(0deg, rgba(164, 227, 161, 0.8), rgba(164, 227, 161, 0.8)), url("ME.JPG");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -446,12 +446,24 @@ header h3 span {
   color: white;
   font-family: 'Lato';
   font-weight: normal;
+
 }
 .about {
+  position: relative;
   text-align: center;
   padding-bottom: 30px;
   background: #eeeeee;
   padding-top: 40px;
+}
+.about img{
+  position: absolute;
+  top:30%;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  opacity: .2;
 }
 
 .about h2 {
@@ -487,6 +499,7 @@ header h3 span {
   margin: 20px 70px;
   text-align: justify;
   line-height: 2em;
+  z-index: 2;
 }
 
 .services {
