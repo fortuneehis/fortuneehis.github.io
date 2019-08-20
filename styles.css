@@ -27,7 +27,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background: #A4E3A1;
+  background: #252525;
 }
 a {
   outline: 0;
@@ -35,14 +35,14 @@ a {
 
 .light {
   width: 100%;
-  background-color: rgba(0,0,0,0);
+  background-color: #252525;
   position: fixed;
   z-index: 10;
   padding-bottom: 0;
   transition: .6s;
 }
 .scroll {
-  background-color: #A4E3A1;
+  background-color: rgba(0,0,0,.7);
 }
 .loader{
   width: 100%;
@@ -87,7 +87,7 @@ a {
   -webkit-transform: translate(-50%,-50%);
   width: 90px;
   height: 90px;
-  background: #A061E3;
+  background: #ff6458;
   border-radius: 50%;
   -webkit-animation: load-img .5s infinite ease-in-out;
           animation: load-img .5s infinite ease-in-out;
@@ -204,7 +204,7 @@ ul li a:hover {
 }
 
 ul li:hover a p {
-  color: #A4E3A1;
+  color: #252525;
 }
 
 ul li a p {
@@ -229,12 +229,12 @@ ul li a p {
 }
 
 .li-active a p {
-  color: #A4E3A1;
+  color: #252525;
 }
 
 header {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(164, 227, 161, 0.8)), to(rgba(164, 227, 161, 0.8))), url("ME.jpg");
-  background: linear-gradient(0deg, rgba(164, 227, 161, 0.8), rgba(164, 227, 161, 0.8)), url("./ME.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("background.svg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("background.svg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -243,8 +243,20 @@ header {
   height: 620px;
   text-align: center;
   padding-top: 70px;
+  position: relative;
 }
-
+header::before{
+  content: '';
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff6458;
+  width: 70px;
+  height: 70px;
+  z-index: 4;
+  border-radius: 0 0 30px 30px;
+}
 header .img {
   width: 150px;
   height: 150px;
@@ -328,7 +340,7 @@ header h1 {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #eeeeee;
+  border-right: 4px solid #eeeeee;
   width: 18ch;
   -webkit-animation: type-anim 5s steps(25) infinite, border-blink 0.5s infinite alternate;
           animation: type-anim 5s steps(25) infinite, border-blink 0.5s infinite alternate;
@@ -386,68 +398,18 @@ header h3 span {
 }
 
 .btn {
-  background: none;
-  width: 120px;
-  height: 35px;
-  border: 2px solid #fff;
-  margin-top: 40px;
+  background: #ff6458;
   color: #fff;
-  padding-bottom: 30px;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
+  border-radius: 50px;
+  margin-top: 30px; 
+  transition: .4s;
+}
+.btn:hover{
+  transform: scale(0.8);
+  color:#eeeeee;
 }
 
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: rgba(160, 97, 227, 0.6);
-  -webkit-transition: 1s;
-  transition: 1s;
-  border: 1px solid #A061E3;
-}
-
-.btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: none;
-  -webkit-transition: 1s;
-  transition: 1s;
-  border: 4px solid white;
-}
-
-.btn:hover::before {
-  width: 100%;
-  border: 0;
-}
-
-.btn:hover p {
-  position: absolute;
-  margin: 0 auto;
-  font-weight: bolder;
-  z-index: 3;
-}
-
-.btn:hover::after {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  opacity: 0;
-}
-
-.btn p {
-  color: white;
-  font-family: 'Lato';
-  font-weight: normal;
-
-}
 .about {
   position: relative;
   text-align: center;
@@ -485,7 +447,7 @@ header h3 span {
   left: 50%;
   width: 70px;
   height: 5px;
-  background-color: #A061E3;
+  background-color: #ff6458;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border-radius: 50px;
@@ -503,8 +465,8 @@ header h3 span {
 }
 
 .services {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("leaf_black.png");
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("leaf_black.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("./img/leaf_black.png");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("leaf_black.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -528,63 +490,48 @@ header h3 span {
 
 .service-margin {
   margin-top: 40px;
+  position: relative;
 }
 
 .service-box {
   width: 100%;
-  background: none;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: #eeeeee;
   text-align: center;
-  padding: 20px;
   position: relative;
+  transform: scale(.9);
+  transition: .2s;
 }
-
-.services .service-box::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: white;
-  border-radius: 50%;
-  -webkit-transition: 1s;
-  transition: 1s;
+.service-box:hover{
+  transform: scale(1);
 }
-
-.services .service-box:hover::before {
+.service-margin .service-box .background{
   width: 100%;
-  height: 100%;
-  border-radius: 0;
-  background: rgba(255, 255, 255, 0.3);
+  padding: 20px 0;
+  background-color: #ff6458;
 }
-
 .service-box p {
-  font-color: white;
+  font-color: #5b5b5b;
   font-size: 14px;
+  padding: 10px 20px;
 }
-
-.white {
-  color: #eeeeee;
+.content{
+  margin: 0;
+}
+.h2 {
+  color: #5b5b5b;
+  margin: 10px 0;
   font-family: 'Roboto';
   font-weight: 100;
   font-size: 20px;
 }
 
-.p-white {
-  color: #eeeeee;
-  font-family: 'Roboto';
-  font-weight: 300;
+.p {
+  color: #5b5b5b;
+  font-family: 'Lato';
   font-size: 14px;
   text-align: justify;
 }
 
-.img-stack {
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
 
 .languages {
   text-align: center;
@@ -613,13 +560,13 @@ header h3 span {
 .portfolio {
   text-align: center;
   padding-bottom: 30px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(164, 227, 161, 0.9)), to(rgba(164, 227, 161, 0.9))), url("pattern.png");
-  background: linear-gradient(0deg, rgba(164, 227, 161, 0.9), rgba(164, 227, 161, 0.9)), url("pattern.png");
+  background: #252525;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: repeat-x;
   padding-top: 40px;
+  
 }
 
 .portfolio h2 {
@@ -651,110 +598,50 @@ header h3 span {
 
 .port {
   position: relative;
+  display: block;
+  border:none;
+  padding: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,1);
+}
+
+.img{
+  position: relative;
+}
+.image{
+  width: 100%;
+  height: 100%;
+  padding: 0 0;
+}
+.content{
+  width: 100%;
   height: 200px;
+  background-color: #eeeeee;
+  padding-top: 10px;
 }
-
-.port::before {
+.content .attach{
+  position: relative;
+}
+.content .attach::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -10px;
+  left: 50%;
+  width: 70px;
   height: 5px;
-  z-index: 2;
-  background-color: rgba(220, 220, 220, 0.7);
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: #ff6458;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50px;
 }
-
+.content h2{
+  margin: 0;
+  padding: 0;
+  color: #5b5b5b;
+  font-family: 'Lato';
+  font-size: 16px;
+}
 .port:hover {
-  border: 2px solid #A061E3;
-}
-
-.port:hover::before {
-  height: 100%;
-}
-
-.cont {
-  position: relative;
-  text-align: center;
-  margin: 0;
-}
-
-.port .cont h2 {
-  font-family: 'Lato';
-  position: relative;
-  font-size: 14px;
-  font-weight: bolder;
-  color: #5b5b5b;
-  opacity: 0;
-  z-index: 4;
-  -webkit-transition: 2s;
-  transition: 2s;
-  margin: 0;
-}
-
-.port .cont p {
-  position: relative;
-  font-size: 12px;
-  font-family: 'Lato';
-  font-weight: normal;
-  color: #5b5b5b;
-  opacity: 0;
-  z-index: 4;
-  -webkit-transition: 2s;
-  transition: 2s;
-  margin-top: 2px;
-  margin-bottom: 0;
-}
-
-.port .cont .btn-group {
-  z-index: 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.port .cont .btn {
-  position: relative;
-  width: 120px;
-  padding: 15px;
-  height: 2px;
-  margin-right: 10px;
-  -webkit-transition: 4s;
-  transition: 2s;
-  opacity: 0;
-  z-index: 4;
-  border: 2px solid #fff;
-  margin-bottom: 5px;
-}
-
-.port .cont .btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: rgba(160, 97, 227, 0.6);
-  -webkit-transition: 1s;
-  transition: 1s;
-  border: 2px solid #A061E3;
-}
-
-.port .cont .btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: none;
-  -webkit-transition: 1s;
-  transition: 1s;
-  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(255,255,255,.6);
 }
 
 .fixed-icon {
@@ -786,7 +673,7 @@ header h3 span {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 5px solid #A061E3;
+  border: 5px solid #ff6458;
   border-radius: 50%;
   -webkit-animation: fixed-anim 2s infinite ease;
           animation: fixed-anim 2s infinite ease;
@@ -858,56 +745,6 @@ header h3 span {
  
 }
 
-.port .cont .btn:hover::before {
-  width: 100%;
-  border: 0;
-}
-
-.port .cont .btn:hover p {
-  color: #eeeeee;
-  z-index: 4;
-}
-
-.port .cont .btn:hover::after {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  opacity: 0;
-}
-
-.port .cont .btn p {
-  position: absolute;
-  color: #A061E3;
-  font-family: 'Lato';
-  font-weight: bolder;
-  font-size: 10px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.port .cont .btn:hover p {
-  color: white;
-}
-
-.port:hover .cont h2, .port:hover .cont p, .port:hover .cont .btn {
-  opacity: 1;
-}
-
-.port-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-}
-
 .skills {
   width: 100%;
   /*margin:60px auto;
@@ -921,7 +758,7 @@ header h3 span {
 }
 
 .skills li .val {
-  color: #A4E3A1;
+  color: #ff6458;
 }
 
 .skills li p {
@@ -931,7 +768,7 @@ header h3 span {
 
 .bar {
   background: black;
-  border: 1px solid #A4E3A1;
+  border: 1px solid #ff6458;
   background-attachment: fixed;
   background-size: cover;
   display: block;
@@ -942,7 +779,7 @@ header h3 span {
 .bar span {
   height: 12px;
   float: left;
-  background: #A4E3A1;
+  background: #ff6458;
 }
 
 .html {
@@ -1040,7 +877,7 @@ header h3 span {
 }
 
 .text-span {
-  color: #A4E3A1;
+  color: #ff6458;
   cursor: pointer;
 }
 
@@ -1247,8 +1084,8 @@ header h3 span {
   }
   ul {
     position: absolute;
-    background-color: #A4E3A1;
-    top: 90%;
+    background-color: #252525;
+    top: 100%;
     left: 90%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1267,6 +1104,7 @@ header h3 span {
     -webkit-transition: 2s;
     transition: 2s;
     display: block;
+    background-color: rgba(0,0,0,.7);
   }
     .social-icon{
     width: 20px;
@@ -1345,15 +1183,9 @@ header h3 span {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
-}
-
-.contact .social-links.active {
-  visibility: visible;
-  opacity: 1;
 }
 
 .contact .social-links li {
@@ -1367,7 +1199,7 @@ header h3 span {
   background: none;
   -webkit-transition: .6s;
   transition: .6s;
-  overflow: hidden;
+  padding: 0 10px;
 }
 
 .contact .social-links .social-link:hover {
